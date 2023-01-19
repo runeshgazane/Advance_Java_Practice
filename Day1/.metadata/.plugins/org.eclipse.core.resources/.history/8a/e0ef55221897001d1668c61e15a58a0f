@@ -1,0 +1,54 @@
+package com.DAL;
+
+import com.Pojo.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.Pojo.Account;
+import com.Util.DBUtil;
+
+public class AccountsImpl implements IAccounts {
+	private Statement stmt;
+	private Connection con;
+	private ResultSet rset;
+	
+	public AccountsImpl() throws SQLException {
+		con=DBUtil.getCon();
+		rset=stmt.executeQuery("select * from accounts");
+	}
+
+	@Override
+	public int insert(Account act) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Account act) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Account> getAllAccounts() throws SQLException {
+		List<Account> acctList=new ArrayList<Account>();
+		while(rset.next()) {
+			acctList.add(new Account(rset.getInt(1),
+					rset.getString(2),
+					Type.valueOf(rset.getString(3)).getString(3),
+					rset.getDouble(4)));
+		}
+		return null;
+	}
+
+}

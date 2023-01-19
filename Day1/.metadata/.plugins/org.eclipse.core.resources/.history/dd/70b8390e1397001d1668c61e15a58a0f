@@ -1,0 +1,11 @@
+package com.DAL;
+
+import com.Pojo.Account;
+
+public interface IAccounts {
+	int insert(Account act);
+	int update(Account act);
+	int delete(int id);
+	List<Account> getAllAccounts();
+	
+}

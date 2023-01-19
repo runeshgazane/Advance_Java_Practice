@@ -1,0 +1,12 @@
+package com.Util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBUtil {
+	private static Connection con;
+	
+	public static void openConnection() {
+		con=DriverManager.getConnection("jdbc:mysql://localhost:3307", "root", "root123");
+	}
+}

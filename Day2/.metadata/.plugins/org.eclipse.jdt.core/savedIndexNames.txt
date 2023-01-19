@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+D:\Runesh_Saurav_DAC\Dotnet_Runesh\Advance_Java\Day2\.metadata\.plugins\org.eclipse.jdt.core
+346543475.index
+4205425759.index
+1865797976.index
+2377024713.index

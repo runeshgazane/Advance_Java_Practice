@@ -1,0 +1,19 @@
+package com.Tester;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.DAL.AccountsImpl;
+import com.Pojo.Account;
+import com.Util.DBUtil;
+
+public class TestBankApp {
+
+	public static void main(String[] args) throws SQLException {
+		DBUtil.openConnection();
+		AccountsImpl acct=new AccountsImpl();
+		List<Account> acctList=acct.getAllAccounts();
+		for((acct)->System.out.println(acct);)
+	}
+
+}

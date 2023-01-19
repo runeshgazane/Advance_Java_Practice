@@ -1,0 +1,21 @@
+package com.Pojo;
+
+public class Account {
+	private int id;
+	private String name;
+	private Type acctype;
+	private double balance;
+	
+	public Account() {
+	}
+
+	public Account(int id, String name, Type acctype, double balance) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.acctype = acctype;
+		this.balance = balance;
+	}
+	
+	
+}

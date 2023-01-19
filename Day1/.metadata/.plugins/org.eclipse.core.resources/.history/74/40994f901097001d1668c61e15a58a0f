@@ -1,0 +1,57 @@
+package com.Pojo;
+
+public class Account {
+	private int id;
+	private String name;
+	private Type acctype;
+	private double balance;
+	
+	public Account() {
+	}
+
+	public Account(int id, String name, Type acctype, double balance) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.acctype = acctype;
+		this.balance = balance;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Type getAcctype() {
+		return acctype;
+	}
+
+	public void setAcctype(Type acctype) {
+		this.acctype = acctype;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", name=" + name + ", acctype=" + acctype + ", balance=" + balance + "]";
+	}
+		
+}

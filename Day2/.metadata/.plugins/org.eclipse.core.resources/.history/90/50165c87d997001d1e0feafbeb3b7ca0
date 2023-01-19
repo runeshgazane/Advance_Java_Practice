@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		Email : <input type="email" id="email" name="email">
+		Password : <input type="email" id="email" name="email">
+		
+	</form>
+</body>
+</html>

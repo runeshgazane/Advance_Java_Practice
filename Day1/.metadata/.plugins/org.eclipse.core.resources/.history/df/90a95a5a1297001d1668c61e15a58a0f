@@ -1,0 +1,14 @@
+package com.Util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBUtil {
+	private static Connection con;
+	
+	public static void openConnection() throws SQLException {
+		con=DriverManager.getConnection("jdbc:mysql://localhost:3307/runesh", "root", "root123");
+		System.out.println("Connected to DB.");
+	}
+}
