@@ -42,11 +42,14 @@ public class TopicServlet extends HttpServlet {
 			HttpSession hs=request.getSession();
 			User user=(User) hs.getAttribute("user_details");
 			List<Topic> topicList=ti.getAllTopics();
+			pw.write("<form action='tutorial' method='post'>");
 			for(Topic t : topicList) {
-				pw.write("<input type='radio' name='t.getName()' id='t.getId()' value='t.getName()'>"+t.getName()+"<br><br>");
+				int id=t.getId();
+				String name=t.getName();
+				pw.write("<input type='radio' name='topicname' id="+t.getId() +" value="+id +">"+t.getName()+"<br><br>");
 			}
 			pw.write("<button type='submit' id='btn' name='btn' value='submit'>Show details</button>");
-			response.sendRedirect("tutorial");
+			pw.write("</form>");
 		}
 		catch(Exception e) {
 			e.printStackTrace();

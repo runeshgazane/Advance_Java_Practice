@@ -8,4 +8,6 @@ import com.pojo.Tutorial;
 
 public interface TutorialDAL {
 	List<Tutorial> getAllTutorials() throws SQLException;
+	
+	List<Tutorial> getTutorialsById(int topicId) throws SQLException;
 }
